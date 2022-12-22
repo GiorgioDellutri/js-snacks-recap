@@ -62,14 +62,15 @@
             <main>
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 my-3">
                             <div class="conversation">
                                 <!-- Tramite il v-for mostro i messaggi della conversazione qui -->
-                                <div v-for="message in conversation">
+                                <div v-for="message in conversation" :class="{ 'user-message': message.sender === 'user', 'computer-message': message.sender === 'computer' }">
                                     {{message.text}}
                                 </div>
                             </div>
                             <input type="text" v-model="input-message" placeholder="Scrivi un messaggio">
+                            <a href="" class="btn btn-success">Send message</a>
                         </div>
                     </div>
                 </div>
