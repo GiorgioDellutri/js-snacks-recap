@@ -69,8 +69,8 @@
                                     {{message.text}}
                                 </div>
                             </div>
-                            <input type="text" v-model="input-message" placeholder="Scrivi un messaggio">
-                            <a href="" class="btn btn-success">Send message</a>
+                            <input type="text" v-model="inputMessage" placeholder="Scrivi un messaggio">
+                            <a href="#" class="btn btn-success"@click="sendMessage" >Send message</a>
                         </div>
                     </div>
                 </div>
