@@ -69,13 +69,12 @@
                                     {{message.text}}
                                 </div>
                             </div>
-                            <input type="text" v-model="inputMessage" placeholder="Scrivi un messaggio">
+                            <input type="text" v-model="inputMessage" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage">
                             <a href="#" class="btn btn-success"@click="sendMessage" >Send message</a>
                         </div>
                     </div>
                 </div>
             </main>
-
         </div>
 
     <!-- Axios Cdn -->
